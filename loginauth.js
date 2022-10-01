@@ -25,7 +25,7 @@ function auth_user()
   docRef.get().then((doc) => { //gets the whole data against the entered email address
       if (doc.exists) 
       {
-          console.log("Document data:", doc.data().username); //gets the username from the doc
+          // console.log("Document data:", doc.data().username); //gets the username from the doc
           
       } 
 
@@ -141,7 +141,7 @@ document.getElementById("logout_btn").addEventListener("click", () =>
 
   }, function(error) {
     alert('Sign Out Error', error);
-    console.error('Sign Out Error', error);
+    // console.error('Sign Out Error', error);
   });
 })
 
@@ -229,5 +229,5 @@ document.getElementById("re_enter").addEventListener("click", () => {
 
 
 // setInterval(() => {
-//   console.clear()
+  // console.clear()
 // }, 100);

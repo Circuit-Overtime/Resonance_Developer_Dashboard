@@ -19,7 +19,7 @@
   }
 
   table { 
-    width: 90%;
+    width: 88%;
       left: 5%; 
     border-collapse: collapse; 
     margin:50px auto;
@@ -141,12 +141,12 @@
   This query will take effect for any screen smaller than 760px
   and also iPads specifically.
   */
-  @media 
-  only screen and (max-width: 760px),
+  @media only screen and (max-width: 768px),
   (min-device-width: 768px) and (max-device-width: 1024px)  {
 
     table { 
-        width: 100%; 
+        width: 82%;
+        left: 1%; 
     }
 
     /* Force table to not be like tables anymore */
@@ -169,6 +169,7 @@
       border-bottom: 1px solid #eee; 
       position: relative;
       padding-left: 50%; 
+      height: 30px;
     }
 
     td:before { 
@@ -183,9 +184,72 @@
       /* Label the data */
       content: attr(data-column);
 
-      color: #000;
+      color: rgb(0, 255, 255);
       font-weight: bold;
     }
+    .album_pic
+    {
+        height: 70px;
+        width: 70px;
+    }
+
+    tr:nth-of-type(odd) { 
+      background: rgb(0, 42, 66); 
+      
+      }
+  
+  
+        tr:nth-of-type(even) { 
+          
+            background: rgb(0, 10, 53); 
+            }
+  .Uploader
+  {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 15px;
+                
+  }           
+  .Song_Name
+  {
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      font-family: "calibri";
+  }
+
+  .Genre
+  {
+      color: rgb(255, 230, 0);
+      font-weight: 700;
+      font-size: 15px;
+
+  }
+
+  .Artist
+  {
+      color: rgb(255, 255, 255);
+      font-weight: 700;
+      font-size: 15px;
+      
+  }
+
+  .Album_Name
+  {
+      color: rgb(255, 255, 255);
+      font-weight: 700;
+      font-size: 15px;
+      
+  }
+
+  .DOU
+  {
+      color: rgb(255, 255, 255);
+      font-weight: 700;
+      font-size: 15px;
+      
+  }
+
 
   }
 

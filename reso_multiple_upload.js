@@ -192,7 +192,8 @@ function uploadImageAsPromise (imageFile) {
                             name : file_name_save,
                             file_size: imageFile.size,
                             uploader: "Resonance Official",
-                            artist: "",
+                            artist: "-",
+                            album_name : "-",
                             code_id : Date.now(),
                             banned: false,
                             album : "https://firebasestorage.googleapis.com/v0/b/chat-c774b.appspot.com/o/0A%20NightAngle%20Assets%2Fdef%20logo.jpg?alt=media&token=2acb6b5b-c634-4927-b029-d107913efe00",
@@ -423,12 +424,12 @@ database_music.collection("Songs").where("uploader", "==", "Resonance Official")
         cities.push(doc.data());
         tr_struc = `<tr id="${doc.data().name}" data-id="${doc.data().name}" class="table_units">
         
-        <td data-column="Song_Name"  class="Song_Name"  onclick="edit_music(this)" data-id="${doc.data().name}">${doc.data().name}</td>
+        <td data-column="Song_Name"  class="Song_Name"  onclick="edit_music(this)" data-id="${doc.data().name}">${doc.data().name.slice(0,40).concat("...")}</td>
         <td data-column="Genre" class="Genre" >${doc.data().genre}</td>
         <td data-column="Artist" class="Artist" >${doc.data().artist}</td>
         <td data-column="Album_Name" class="Album_Name" >${doc.data().album_name}</td>
         <td data-column="DOU" class="DOU" >${doc.data().date_uploaded}</td>
-        <td data-column="Uploader" class="Uploader" >${doc.data().uploader}</td>
+        <td data-column="Uploader" class="Uploader" >${doc.data().uploader.slice(0,40).concat("...")}</td>
         <td data-column="code_id" class="code_id" >${doc.data().code_id}</td>
         <td data-column="Album" class="album_pic"  data-id="${doc.data().name}" onclick = "edit_thumbnail(this)"><img src="${doc.data().album}" id="${doc.data().name}" class="tr_image"></td>
       </tr>`
